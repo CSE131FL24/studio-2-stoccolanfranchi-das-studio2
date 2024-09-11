@@ -21,8 +21,6 @@ public class Ruin {
 		double chanceofWinning = Math.random (); 
 
 		int value = startAmount; 
-
-		
 			
 		for (int i = 0; i < daysSimulate; i++) {
 			while (winLimit > value && value>0) {//while loops go indefinitely and for loops go to a certain amount 
@@ -38,8 +36,16 @@ public class Ruin {
 				
 			}
 		}
-
-
+		if (winChance == 0.5) {
+		System.out.println("Expected ruin:"); 
+		double expectedRuin = in.nextDouble(); 
+		expectedRuin = (1-(startAmount/winLimit)); 
+		}
+		else {
+		System.out.println ("Expected ruin:"); 
+		double expectedRuin2 = in.nextDouble();
+		expectedRuin2 = ((1-winChance/winChance)- (1-winChance/winChance))/ (1-(1-winChance/winChance));
+		
 	}
-
+	}
 }
